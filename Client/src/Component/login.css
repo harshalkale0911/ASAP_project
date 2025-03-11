@@ -1,0 +1,80 @@
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .suiiii {
+    background-color: #000000;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  /* Style for h1 */
+  .suiiii h1 {
+    margin-bottom: 20px; 
+    color: #ffffff; 
+  }
+  
+
+  .suiiii input {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: 1px solid #cccccc; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+  }
+  
+
+  .suiiii button {
+    width: 100%; 
+    padding: 10px; 
+    background-color: #ffffff; 
+    color: #000000; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+  }
+ 
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    color: #ffffff;
+  }  
+  
+  input {
+    padding: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    
+  }
+  
+  button {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100px;
+    justify-content: center;
+  }
+
+  #goback2{
+    position: relative;
+    right: 600px;
+    width: 100px;
+    bottom: 100px;
+  }
