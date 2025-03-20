@@ -1,15 +1,11 @@
 const mongoose = require('mongoose');
 
-const ReviewSchema = new mongoose.Schema({
-  Movie_Name: String,
-  Feedback: String,
-  Rating: String,
-  user:{
-    type: String,
-    required: true
-  }
+const reviewSchema = new mongoose.Schema({
+    Movie_Name: { type: String, required: true },
+    Feedback: { type: String, required: true },
+    Rating: { type: String, required: true },
+    user: { type: String, required: true },
+    created_by: { type: String, required: true }  // NEW PROPERTY ADDED
 });
 
-const ReviewModel = mongoose.model("review", ReviewSchema);
-
-module.exports = ReviewModel;
+module.exports = mongoose.model('Review', reviewSchema);

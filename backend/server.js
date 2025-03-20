@@ -73,13 +73,33 @@ app.get('/movies', async (req, res) => {
 
 app.post('/reviews', async (req, res) => {
   try {
-    const { Movie_Name, Feedback, Rating, user } = req.body; 
-    console.log('Received review data:', { Movie_Name, Feedback, Rating, user });
-    const review = new ReviewModel({ Movie_Name, Feedback, Rating, user }); 
+    const { Movie_Name, Feedback, Rating, user, created_by } = req.body; 
+    console.log('Received review data:', { Movie_Name, Feedback, Rating, user, created_by });
+
+    const review = new ReviewModel({
+      Movie_Name,
+      Feedback,
+      Rating,
+      user,
+      created_by
+    }); 
+
     await review.save();
     res.status(201).json(review);
   } catch (err) {
     console.error('Error adding review:', err);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+app.get('/reviews/:created_by', async (req, res) => {
+  const { created_by } = req.params;
+
+  try {
+    const reviews = await ReviewModel.find({ created_by });
+    res.status(200).json(reviews);
+  } catch (err) {
+    console.error('Error retrieving reviews by user:', err);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
