@@ -1,0 +1,18 @@
+meta {
+  name: get-item
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:3000/CRUD-operation/user
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name":"Adrina",
+    "description":"she is girl"
+  }
+}

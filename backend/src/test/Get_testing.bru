@@ -1,0 +1,17 @@
+meta {
+  name: Get_testing
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3000/post
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "message":"whats upp"
+  }
+}
