@@ -1,0 +1,19 @@
+meta {
+  name: post-item
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/CRUD-operation/create-user
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name":"Jerome",
+    "age":18,
+    "description":"she/her"
+  }
+}
