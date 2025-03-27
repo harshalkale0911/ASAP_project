@@ -21,7 +21,9 @@
     "joi": "^17.12.2",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.3.0",
-    "mongoose": "^8.2.0"
+    "mongoose": "^8.2.0",
+    "mysql2": "^3.14.0",
+    "sequelize": "^6.37.6"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
