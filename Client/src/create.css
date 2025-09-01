@@ -1,0 +1,15 @@
+.filtered-reviews {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+  }
+  
+  .review-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
